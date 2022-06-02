@@ -1,0 +1,2 @@
+#!/binbash
+gcc $CFILE -E -o c
