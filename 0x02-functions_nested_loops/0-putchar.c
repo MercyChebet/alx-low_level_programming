@@ -2,23 +2,32 @@
 
 /**
  * main - Entry point
- * 
- * Return: nothing, return void
+ *
+ * Return: 0
  */
+
+
 
 int main(void)
 
 {
 
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
+	char x[] = "_putchar";
 
+		int i;
+
+
+		for (i = 0; i < 8; i++)
+
+		{
+
+			_putchar(x[i]);	
+	
+					}
+
+
+
+			_putchar('\n');
+		
 	return (0);
 }
