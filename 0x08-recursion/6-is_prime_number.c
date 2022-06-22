@@ -1,28 +1,54 @@
 #include "main.h"
 /**
- * prime2 - Makes possible to evaluate from 1 to n
- * @a: same number as n
- * @b: number that iterates from 1 to n
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * evaluate_num - recursion loop
+ * @num: num
+ * @iterator: number to iterate
+ * Return: return 1 or 0
  */
-int prime2(int a, int b)
+
+int evaluate_num(int num, int iterator)
 {
-	if (a == b)
+	if (iterator == num - 1)
+	{
 		return (1);
-	else if (a % b == 0)
-		return (0);
-	return (prime2(a, b + 1));
-}
-/**
- * is_prime_number - checks if a number is prime
- * @n: Number Integer
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int is_prime_number(int n)
-	if (n <= 1)
-	return (0);
-	return (prime2(n, 2));
 	}
+
+	else if (num % iterator == 0)
+	{
+		return (0);
+	}
+
+	if (num % iterator != 0)
+	{
+		return (evaluate_num(num, iterator + 1));
+	}
+
+	return (0);
+
+}
+
+/**
+ * is_prime_number - evaluate prime or not
+ * @num: number
+ * Return: return 1 prime - return 0 otherwise
+ */
+
+int is_prime_number(int num)
+{
+
+	int iterator;
+
+	iterator = 2;
+
+	/* only greater than 2*/
+	if (num < 2)
+	{
+		return (0);
+	}
+
+	if (num == 2)
+	{
+		return (1);
+	}
+	return (evaluate_num(num, iterator));
 }
