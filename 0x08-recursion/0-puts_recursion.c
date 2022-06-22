@@ -1,8 +1,7 @@
 #include "main.h"
 /**
  * _puts_recursion - prints a string in reverse
- * s: pointer block of memory to fill
- * 
+ * @s: string
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
