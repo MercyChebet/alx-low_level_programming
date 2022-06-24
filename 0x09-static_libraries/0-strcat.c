@@ -1,7 +1,29 @@
 #include "main.h"
 
-int main(void)
+/**
+ * _strcat - This function concat two strings
+ * @src: This source string
+ * @dest: This destinatin string
+ * Return: returns void
+ */
+
+
+char *_strcat(char *dest, char *src)
 {
-	_puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
-	return (0);
+	int i = 0;
+	int count;
+
+	while (*(dest + i) != '\0')
+		i++;
+
+	for (count = 0; *(src + count) != '\0'; count++)
+	{
+		*(dest + i) = *(src + count);
+		i++;
+
+	}
+	*(dest + i) = '\0';
+
+	return (dest);
+
 }

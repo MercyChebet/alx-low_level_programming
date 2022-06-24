@@ -1,13 +1,24 @@
 #include "main.h"
 
+/**
+ * _strlen - A function that returns the lenght of a string
+ * @s: A pointer to a char
+ * Return: The lenght of a string
+ */
 
-
-int main(void)
-
+int _strlen(char *s)
 {
 
-		_puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+	int count, sum;
 
-			return (0);
+	sum = 0;
+
+	for (count = 0; s[count] != '\0'; count++)
+	{
+		sum += count;
+
+	}
+
+	return (count);
 
 }

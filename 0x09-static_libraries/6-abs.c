@@ -1,13 +1,20 @@
+#include <stdio.h>
 #include "main.h"
 
+/**
+ * _abs - This program prints absolute value of an integer
+ * @num: the input
+ * Description: To print an absolute value
+ * Return: return an int
+ */
 
-
-int main(void)
-
+int _abs(int num)
 {
 
-		_puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
-
-			return (0);
-
+	if (num > 0)
+		return (num);
+	else if (num == 0)
+		return (0);
+	else
+		return (-1 * num);
 }

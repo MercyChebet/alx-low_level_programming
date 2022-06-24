@@ -1,13 +1,31 @@
 #include "main.h"
 
 
+/**
+ * _atoi - the function that convert strings to an integers
+ * @s: The strings pass to the function
+ * Return: return int;
+ */
 
-int main(void)
-
+int _atoi(char *s)
 {
+	int sign = 1;
+	unsigned int num = 0;
 
-		_puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+	do 
+	{
 
-			return (0);
+		if (*s == '-')
+			sign *= -1;
 
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
+
+		else if (num > 0)
+			break;
+
+	}
+	while (*s++);
+
+	return (num *sign);
 }

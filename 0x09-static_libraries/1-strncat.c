@@ -1,13 +1,36 @@
 #include "main.h"
 
+/**
+ * _strncat - This function concat n number of strings
+ * @dest: The destinatin of the strings
+ * @src: The source of the strings
+ * @n: The number of strings to concatenate
+ * Return: the pointer to dest
+ */
 
-
-int main(void)
-
+char *_strncat(char *dest, char *src, int n)
 {
+	int count;
+	int count2;
 
-		_puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+	count = 0;
+	count2 = 0;
 
-			return (0);
+	while (*(dest + count) != '\0')
+	{
+		count++;
+	}
 
+	while (count2 < n)
+	{
+		*(dest + count) = *(src + count2);
+		if (*(src + count2) == '\0')
+		{
+			break;
+		}
+
+		count++;
+		count2++;
+	}
+	return (dest);
 }

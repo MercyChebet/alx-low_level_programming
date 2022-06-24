@@ -1,13 +1,19 @@
 #include "main.h"
 
+/**
+ * _puts - The function that prints a string t stdout
+ * @str: The pointer to a char
+ * Return: nothing upon executions
+ */
 
-
-int main(void)
-
+void _puts(char *str)
 {
+	int count;
 
-		_puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+	for (count = 0; str[count] != '\0'; count++)
+	{
+		_putchar(str[count]);
 
-			return (0);
-
+	}
+	_putchar('\n');
 }
