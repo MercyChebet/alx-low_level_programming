@@ -1,6 +1,6 @@
 /*
  * File: 9-insert_nodeint.c
- * Auth: Gedeon Obae Gekonge`
+ * Auth: Mercy Chebet
  */
 
 #include "lists.h"
