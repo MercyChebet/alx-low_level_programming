@@ -1,17 +1,18 @@
+#include <stdio.h>
 #include "main.h"
 
-
-
 /**
- * _islower - check if character is uppercase
- * @c: character to check
- * Return: 1 if c is lowercase, 0 otherwise
+ * _islower - This program checks for lower case
+ * @c: contain value to be checked
+ * Description: To check for lowercase
+ * Return: 1 if c is lower and 0 if otherwise
  */
 
 int _islower(int c)
-
 {
-
-	return (c >= 'a' && c <= 'z');
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	else
+		return (0);
 
 }
